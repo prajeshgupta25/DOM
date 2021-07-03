@@ -28,6 +28,18 @@
     <script>
       // Q write a script which on single clicking of above p tags highlights them with red, double clicking highlights them with green and on triple removes the highlights.
 
+      let allPTags = document.querySelectorAll("p");
+      
+      //e is an event
+      for(let i=0; i<allPTags.length; i++){
+
+        //event is an object & it describes the current happening event.
+        allPTags[i].addEventListener("click", function(e){
+          console.log(e.currentTarget);
+
+        })
+      }
+
       
     </script>
   </body>
