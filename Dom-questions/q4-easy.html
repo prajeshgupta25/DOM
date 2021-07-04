@@ -110,7 +110,7 @@
           let pTag = currentTicket.querySelector("p");
           let category = pTag.getAttribute("data-category");
 
-          if(currValue!=category){
+          if(currValue!=category && currValue!="none"){
             currentTicket.style.display = "none";
           }else{
             currentTicket.style.display = "block";
