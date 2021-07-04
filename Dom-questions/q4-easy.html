@@ -100,7 +100,22 @@
     </div>
     <script>
       // Q Make the filter work
+      let selectTag = document.querySelector("select");
+      let movies = document.querySelectorAll(".movies");
 
+      selectTag.addEventListener("change", function(e){
+        for(let i=0;i<movies.length;i++){
+          let currentTicket = movies[i];
+          let pTag = currentTicket.querySelector("p");
+          let category = pTag.getAttribute("data-category");
+
+          if(selectTag.value!=category){
+            currentTicket.style.display = "none";
+          }else{
+            currentTicket.style.display = "block";
+          }
+        }
+      });
      
     </script>
   </body>
