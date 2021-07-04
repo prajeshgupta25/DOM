@@ -710,17 +710,20 @@
         if(e.key == "1"){
           s1.scrollIntoView();
         }
-        if(e.key == "2"){
+        else if(e.key == "2"){
           s2.scrollIntoView();
         }
-        if(e.key == "3"){
+        else if(e.key == "3"){
           s3.scrollIntoView();
         }
-        if(e.key == "t"){
+        else if(e.key == "t"){
           body.scrollIntoView();
         }
-        if(e.key == "b"){
+        else if(e.key == "b"){
           body.scrollIntoView(false);
+        }
+        else{
+          alert("Invalid key was pressed");
         }
       });
       

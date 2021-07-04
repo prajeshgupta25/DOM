@@ -32,11 +32,15 @@
     <script>
       //Q The following code is broken. Even when clicked on yellow, its alerted that red is clicked. Fix it
       let red = document.querySelector(".red");
+      let yellow = document.querySelector(".yellow");
 
       red.addEventListener("click", function () {
         alert("red was clicked");
       });
 
+      yellow.addEventListener("click", function(e){
+        e.stopPropagation();
+      });
      
     </script>
   </body>
