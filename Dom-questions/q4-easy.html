@@ -104,12 +104,13 @@
       let movies = document.querySelectorAll(".movies");
 
       selectTag.addEventListener("change", function(e){
+        let currValue = selectTag.value;
         for(let i=0;i<movies.length;i++){
           let currentTicket = movies[i];
           let pTag = currentTicket.querySelector("p");
           let category = pTag.getAttribute("data-category");
 
-          if(selectTag.value!=category){
+          if(currValue!=category){
             currentTicket.style.display = "none";
           }else{
             currentTicket.style.display = "block";
